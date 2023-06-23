@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
 
     <title>Document</title>
-</head>
-<style>
-  
-    
-</style>
-<body>
-    <div class="input_div">
-        <h1>Water Tank Problem</h1>
-        <input name="input_value"  id="input_value"  type="text" placeholder="0,4,0,0,0,6,0,6,4,0"/>
-        <button onclick="calculate()">Calculate</button>
+  </head>
 
-        <h4 id="display_unit"></h4>
+  <body>
+    <div class="input_div">
+      <h1>Water Tank Problem</h1>
+      <input
+        name="input_value"
+        id="input_value"
+        type="text"
+        placeholder="0,4,0,0,0,6,0,6,4,0"
+      />
+      <button onclick="calculate()">Calculate</button>
     </div>
-    
+
+    <h4 id="display_unit"></h4>
+
+    <div class="chart_div">
+      <div>
+        <h6>Input</h6>
+        <canvas id="inputChart"> </canvas>
+      </div>
+      <div>
+        <h6>Output</h6>
+        <canvas id="outputChart"></canvas>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

@@ -1,50 +1,117 @@
-body{
-    margin: 0;
-    padding: 0;
-    min-width: 100vw;
-    min-height: fit-content;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  min-height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  gap: 1vw;
+}
+.input_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2vw;
+  color: #0384b7;
+}
+#input_value {
+  width: 30vw;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-bottom: 0.2vw solid #52b5dc;
+  color: #0384b7;
+  background-color: transparent;
+  font-size: 1.4vw;
+}
+#input_value::placeholder {
+  color: #52b5dc;
+  opacity: 80%;
+}
+button {
+  background-color: #52b5dc;
+  padding: 0.5vw 1vw 0.5vw 1vw;
+  outline: none;
+  border: none;
+  border-radius: 2vw;
+  color: white;
+  font-size: 1.3vw;
+}
+h1 {
+  font-size: 3vw;
+}
+h4 {
+  margin: 0;
+  font-size: 2.5vw;
+  color: #0384b7;
+}
+.chart_div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  justify-content: space-evenly;
+}
+.chart_div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5vw;
+  color: #52b5dc;
+}
+h6 {
+  margin: 0;
+  font-size: 1.5vw;
+}
+#inputChart,
+#outputChart {
+  width: 40vw !important;
+  height: 20vw !important;
+  background-color: rgba(1, 151, 210, 0.1);
+  padding: 1vw;
+  border-radius: 1vw;
+}
 
-}
-.input_div{
- 
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    flex-direction: column;
-    gap: 2vw;
-    color: #52b5dc;
-}
-#input_value{
-    width: 30vw;
-    text-align: center;
-    outline: none;
-    border: none;
-    border-bottom: 0.2vw solid #52b5dc;
-    color:#0384b7;
-    background-color: transparent;
-    font-size: 1.3vw;
-}
-#input_value::placeholder{
-    color: #52b5dc;
-    opacity: 80%;
-}
-button{
-    background-color: #52b5dc;
-    padding: 0.5vw 1vw 0.5vw 1vw;
-    outline: none;
-    border: none;
-    border-radius: 2vw;
-    color: white;
-    font-size: 1.3vw;
-}
-h1{
+
+@media only screen and (max-width: 600px) {
+  body {
+    gap: 3vw;
+  }
+  h1 {
+    font-size: 7vw;
+  }
+  h4 {
+    font-size: 5vw;
+  }
+  #input_value {
+    width: 70vw;
+    border-bottom: 0.5vw solid #52b5dc;
     font-size: 3vw;
-}
-h4{
-    font-size: 2.5vw;
-    color: #0384b7;
+  }
+  button {
+    font-size: 3vw;
+    padding: 1vw 2vw 1vw 2vw;
+    border-radius: 4vw;
+  }
+  .chart_div {
+    flex-direction: column;
+  }
+  .chart_div > div {
+    gap: 2vw;
+  }
+  #inputChart,
+  #outputChart {
+    width: 80% !important;
+    height: 40% !important;
+    padding: 2.5vw;
+    border-radius: 2vw;
+  }
+  h6 {
+    font-size: 3vw;
+  }
 }
